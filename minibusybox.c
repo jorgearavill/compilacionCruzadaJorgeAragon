@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "uname/libuname.h"
 
 int main(int argc, char** argv){
 	// strchr() returns the last appearance of a character
@@ -12,9 +13,9 @@ int main(int argc, char** argv){
 	else
 		command += 1;
 	if(strcmp(command, "minibusybox") == 0)
-		printf("Available commands:\n - sleep\n - cat\n - uname\n - lsmod\n");
+		printf("Available commands:\n - sleep_\n - cat_\n - uname_\n - lsmod_\n");
 	else if(argc == 2){
-		if(strcmp(command, "sleep") == 0)
+		if(strcmp(command, "uname_") == 0)
 			return sleepSeconds(argv[1]);
 		else
 			printf("Unknown command\n");
