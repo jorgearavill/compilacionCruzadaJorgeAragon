@@ -15,10 +15,10 @@ int main(int argc, char** argv){
 		command += 1;
 	if(strcmp(command, "minibusybox") == 0)
 		printf("Available commands:\n - sleep_\n - cat_\n - uname_\n - lsmod_\n");
-	else if(argc == 1){
+	else if(argc > 1){
 		if(strcmp(command, "cat_") == 0)
 		{
-			unameValidation(argc,argv);
+			catValidation(argc,argv);
 		}
 		else
 			printf("Unknown command\n");
