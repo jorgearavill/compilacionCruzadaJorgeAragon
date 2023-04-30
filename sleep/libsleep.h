@@ -10,4 +10,4 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-void sleepValidations(int argc, char * argv[])
+void sleepValidations(int argc, char * argv[]);
