@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "sleep/libsmod.h"
 
 int main(int argc, char** argv){
 	// strchr() returns the last appearance of a character
@@ -12,10 +13,13 @@ int main(int argc, char** argv){
 	else
 		command += 1;
 	if(strcmp(command, "minibusybox") == 0)
-		printf("Available commands:\n - sleep\n - cat\n - uname\n - lsmod\n");
+		printf("Available commands:\n - sleep_\n - cat_\n - uname_\n - lsmod_\n");
 	else if(argc == 2){
-		if(strcmp(command, "sleep") == 0)
-			return sleepSeconds(argv[1]);
+		if(strcmp(command, "lsmod_") == 0)
+		{
+		        printf("Here executing sleep\n");
+			lsmodValidation(argc,argv);
+		}
 		else
 			printf("Unknown command\n");
 	}else
