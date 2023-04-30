@@ -1,4 +1,4 @@
-#include "lsmod/liblsmod.h"
+#include "liblsmod.h"
 
 void lsmodValidation(int argc, char * argv[])
 {
