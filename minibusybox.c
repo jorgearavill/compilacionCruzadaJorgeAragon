@@ -17,7 +17,6 @@ int main(int argc, char** argv){
 	else if(argc == 2){
 		if(strcmp(command, "sleep_") == 0)
 		{
-		        printf("Here executing sleep\n");
 			sleepValidations(argc,argv);
 		}
 		else
