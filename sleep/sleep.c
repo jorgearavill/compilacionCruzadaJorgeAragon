@@ -1,5 +1,16 @@
 #include "libsleep.h"
 
+
+int isNumber(char originalString[])
+{
+    for (int i = 0; originalString[i]!= '\0'; i++)
+    {
+        if (isdigit(originalString[i]) == 0)
+              return 0;
+    }
+    return 1;
+}
+
 void sleepCall(int seconds)
 {
    sleep(seconds);
@@ -25,7 +36,7 @@ void sleepValidations(int argc, char * argv[])
       if(isNumber(argv[i]))
       {      
          int seconds = atoi((argv[i]));
-         if(!seconds && argv[i] != "0" ) 
+         if(!seconds && strcmp(argv[i],"0") !=0 ) 
             {
                // error 
                printf("sleep invalid option\n");

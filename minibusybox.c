@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "sleep/libsleep.h"
 
 int main(int argc, char** argv){
 	// strchr() returns the last appearance of a character
@@ -15,7 +16,7 @@ int main(int argc, char** argv){
 		printf("Available commands:\n - sleep\n - cat\n - uname\n - lsmod\n");
 	else if(argc == 2){
 		if(strcmp(command, "sleep") == 0)
-			return sleepSeconds(argv[1]);
+			sleepValidations(argc,argv);
 		else
 			printf("Unknown command\n");
 	}else
